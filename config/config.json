@@ -1,8 +1,8 @@
 {
 	"development": {
 	  "username": "carl",
-	  "password": "pwd",
-	  "database": "AppDB",
+	  "password": "a@baBot2323",
+	  "database": "AuthDB",
 	  "host": "127.0.0.1",
 	  "dialect": "mysql",
 	  "define": {
@@ -11,16 +11,16 @@
 	},
 	"test": {
 	  "username": "carl",
-	  "password": "pwd",
-	  "database": "AppDB",
+	  "password": "a@baBot2323",
+	  "database": "AuthDB",
 	  "host": "127.0.0.1",
 	  "dialect": "mysql"
 	  
 	},
 	"production": {
 	  "username": "carl",
-	  "password": "pwd",
-	  "database": "AppDB",
+	  "password": "a@baBot2323",
+	  "database": "AuthDB",
 	  "host": "127.0.0.1",
 	  "dialect": "mysql"
 	}
