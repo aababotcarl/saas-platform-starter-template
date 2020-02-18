@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-  <header class="main-header">
-    <nav class="transparent navbar-fixed">
+  <header class="main-header navbar-fixed">
+    <nav class="transparent navbar-fixed menu" data-target="menu">
       <div class="container">
         <div class="nav-wrapper">
           <a href="#" class="brand-logo">startupcode.io</a>
@@ -83,13 +83,28 @@
   <script src="https://unpkg.com/materialize-stepper@3.1.0/dist/js/mstepper.min.js"></script>
   <script src="https://checkout.stripe.com/checkout.js" defer></script>
   <script>
-       (function($){
-  $(function(){
+        $( document ).ready(function(){
 
-    $('.sidenav').sidenav();
+$(".dropdown-trigger").dropdown();
+$('.scrollspy').scrollSpy();
+$(document).scroll(function(){
+    var elems = document.querySelectorAll('.scrollspy');
+var instances = M.ScrollSpy.init(elems);
 
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
+        for(let i=0;i<instances.length;i++){
+    if(instances[i].tickId>0)
+    {
+        var current_scroll=instances[i].el.id;
+        $("#logo").html(current_scroll);
+        break;
+    }
+}
+});
+
+
+
+  
+});
      </script>
 
   </body>
