@@ -1,3 +1,29 @@
+html {
+  font-size: 18px;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-size: 28px; 
+}
+main {
+  flex: 1 0 auto;
+}
+.footnav {
+  background-color: #2196F3 !important;
+}
+.btn-large{
+  width: 200px !important;
+  height: 75px !important;
+  background: green !important;
+  font-size: large !important;
+  font-weight: bold !important;
+  margin: auto !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  padding: 10px;
+}
 .primary-overlay {
   background: rgba(33, 150, 243, 0.7);
   position: absolute;
@@ -7,12 +33,17 @@
   height: 100%;
   overflow: hidden;
 }
+.secondary-overlay {
+  background: rgba(33, 150, 243, 0.7);
+  min-height: 600px;
+}
 .spaceblue{
-  background: url(../img/space.jpg);
+  background: #2196F3;
   color: #FFF;
 }
 .main-header {
-  background: url(../img/space.jpg);
+  background: url(../img/code.jpeg);
+  background-color: rgba(33, 150, 243, 0.7);
   background-size: cover;
   background-position: center;
   min-height: 600px;
@@ -36,7 +67,7 @@
 }
 
 .active-link {
-  color: #2196F3;
+  color: #FFFFFF;
   font-weight: bold;
 }
 
