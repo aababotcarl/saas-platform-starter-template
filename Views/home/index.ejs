@@ -135,32 +135,32 @@
   </section>
   <!-- Section: prices -->
   <section id="pricing" class="section section-language startupgrey ">
+    <br/><br/>
     <div class="container">
       <div class="row">
         <h4 class="center">Our 
           <span class="blue-text text-darken-1"> Prices</span>
+        </h4>
           <div class="pricing-container">
             <div class="pricing-switcher">
               <p class="fieldset">
                 <input type="radio" name="duration-1" value="monthly" id="monthly-1" checked>
-                <label for="monthly-1">Monthly</label>
+                <label for="monthly-1" class="white-text">Monthly</label>
                 <input type="radio" name="duration-1" value="yearly" id="yearly-1">
-                <label for="yearly-1">Yearly</label>
+                <label for="yearly-1" class="white-text">Yearly</label>
                 <span class="switch"></span>
               </p>
             </div>
             <ul class="pricing-list bounce-invert">
-              <% products.forEach(function(product) { %>
-                <% product.plans.forEach(function(plan) { %>
               <li>
                 <ul class="pricing-wrapper">
                   <li data-type="monthly" class="is-visible">
                     <header class="pricing-header">
-                      <h2>Starter</h2>
+                      <h2>Basic</h2>
                       <div class="price">
-                        <span class="currency">$</span>
-                        <span class="value">0</span>
-                        <span class="duration">mo</span>
+                        <span class="currency blue-text">$</span>
+                        <span class="value blue-text">0</span>
+                        <span class="duration blue-text">mo</span>
                       </div>
                     </header>
                     <div class="pricing-body">
@@ -179,11 +179,11 @@
                   </li>
                   <li data-type="yearly" class="is-hidden">
                     <header class="pricing-header">
-                      <h2>Starter</h2>
+                      <h2>Basic</h2>
                       <div class="price">
-                        <span class="currency">$</span>
-                        <span class="value">0</span>
-                        <span class="duration">yr</span>
+                        <span class="currency blue-text">$</span>
+                        <span class="value blue-text">0</span>
+                        <span class="duration blue-text" >yr</span>
                       </div>
                     </header>
                     <div class="pricing-body">
@@ -197,7 +197,7 @@
                       </ul>
                     </div>
                     <footer class="pricing-footer">
-                      <a class="select" href="#">Sign Up</a>
+                      <a class="select blue" href="#">Sign Up</a>
                     </footer>
                   </li>
                 </ul>
@@ -208,9 +208,9 @@
                     <header class="pricing-header">
                       <h2>Exclusive</h2>
                       <div class="price">
-                        <span class="currency">$</span>
-                        <span class="value">35</span>
-                        <span class="duration">mo</span>
+                        <span class="currency blue-text">$</span>
+                        <span class="value blue-text">35</span>
+                        <span class="duration blue-text">mo</span>
                       </div>
                     </header>
                     <div class="pricing-body">
@@ -231,9 +231,9 @@
                     <header class="pricing-header">
                       <h2>Exclusive</h2>
                       <div class="price">
-                        <span class="currency">$</span>
-                        <span class="value">350</span>
-                        <span class="duration">yr</span>
+                        <span class="currency blue-text">$</span>
+                        <span class="value blue-text">350</span>
+                        <span class="duration blue-text">yr</span>
                       </div>
                     </header>
                     <div class="pricing-body">
@@ -256,11 +256,11 @@
                 <ul class="pricing-wrapper">
                   <li data-type="monthly" class="is-visible">
                     <header class="pricing-header">
-                      <h2>Enterprise</h2>
+                      <h2>Pro</h2>
                       <div class="price">
-                        <span class="currency">$</span>
-                        <span class="value">60</span>
-                        <span class="duration">mo</span>
+                        <span class="currency blue-text">$</span>
+                        <span class="value blue-text">60</span>
+                        <span class="duration blue-text">mo</span>
                       </div>
                     </header>
                     <div class="pricing-body">
@@ -281,9 +281,9 @@
                     <header class="pricing-header">
                       <h2>Pro</h2>
                       <div class="price">
-                        <span class="currency">$</span>
-                        <span class="value">600</span>
-                        <span class="duration">yr</span>
+                        <span class="currency blue-text">$</span>
+                        <span class="value blue-text">600</span>
+                        <span class="duration blue-text">yr</span>
                       </div>
                     </header>
                     <div class="pricing-body">
@@ -302,58 +302,8 @@
                   </li>
                 </ul>
               </li>
-              <%})%>
-              <%})%>
             </ul>
           </div>
-          <!-- Rounded switch -->
-         <!-- Switch -->
-          <div class="switch">
-            <label>
-              Monthly
-              <input type="checkbox" id="subscriptionToggle">
-              <span class="lever"></span>
-              Annual
-            </label>
-          </div>
-
-        </h4>
-        <% products.forEach(function(product) { %>
-          <% product.plans.forEach(function(plan) { %>
-        <div class="card col s4">
-    
-          <div class="card-content center">
-            <h5 class=''><%= plan.nickname %></h5>
-          </div>
-            <div class="card-content center">
-              <h2 class='blue-text '><%= plan.amount %></h2>
-            </div>
-         
-          <ul class='collection center'>
-                <li class='collection-item'>
-                  <strong>FREE</strong> Template
-                </li>
-                <% if(plan.id >=1) { %>
-                  <li class='collection-item'>
-                    <strong>All</strong> CRUD operations
-                  </li>
-                <%}%>
-          </ul>
-          
-          <div class="card-content center">
-            <div class="row">
-              <div class="col s4 center-align">
-                <button class='btn green center-align'>Free trial</button>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-        <% }); %>
-        <% }); %>
-      </div>
-        <br>
-        <br>
         <div class="row">
         </div>
       </div>
