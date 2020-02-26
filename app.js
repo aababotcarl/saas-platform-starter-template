@@ -1,61 +1,44 @@
 var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
+var app = express();
+var passport = require('passport');
+var session = require('express-session');
 var bodyParser = require('body-parser');
 var expressLayouts = require('express-ejs-layouts');
-var indexRouter = require('./Routes/index');
-var models = require('./Models/index.js');
-var app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'Views'));
+//bodyparser setup
+app.use(bodyParser.urlencoded({extended: true }));
+app.use(bodyParser.json());
+
+//passport setup
+app.use(session({secret: 'MYS3CR3TK3Y', resave: true, saveUninitialized: true}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.set('views', './Views');
 app.set('view engine', 'ejs');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+//set ejs laytouts
 app.use(expressLayouts);
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-	extended: false
-}));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+//models for the database
+var models = require('./Models');
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-	var err = new Error('Not Found');
-	err.status = 404;
-	next(err);
-});
+//routes
+var routes = require('./Routes/index.js')(app, passport);
 
-// error handler
-app.use(function(err, req, res, next) {
-	// set locals, only providing error in development
-	res.locals.message = err.message;
-	res.locals.error = req.app.get('env') === 'development' ? err : {};
+//passport config
+require('./config/passport.js')(passport, models.User);
 
-	// render the error page
-	res.status(err.status || 500);
-	res.render('error.ejs', {err: err});
-});
-
-//Sync Database
+//sync db
 models.sequelize.sync().then(function(){
-    console.log('Nice! Database looks fine')
-    
-    }).catch(function(err){
-    console.log(err,"Something went wrong with the Database Update!")
-    });
+	console.log("Database setup!");
+}).catch(function(err){
+	console.log(err);
+});
 
-if (!module.parent) {
-	app.listen(3000, function() {
-		console.log(`app is listening at http://localhost:3000`);
-	});
-}
-
-module.exports = app;
+//run app
+app.listen(3000, function(err){
+	if(!err)
+		console.log('app is working correctly.');
+	console.log(err);
+});
