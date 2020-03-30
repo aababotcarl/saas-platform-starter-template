@@ -15,42 +15,28 @@
     <nav class="blue navbar-fixed menu" data-target="menu">
       <div class="container">
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo">startupcode.io</a>
+          <a href="#" class="brand-logo">Basic Authetication</a>
           <ul class="right hide-on-med-and-down">
             <li>
-              <a class="active-link" href="#home">Home</a>
-            </li>
-            <li>
-              <a class="" href="#whyuseit">Why Use It?</a>
-            </li>
-            <li>
-              <a href="#features">Features</a>
-            </li>
-            <li>
-              <a href="#pricing">Pricing</a>
-            </li>
-            <li>
-              <a href="#testimonials">Testimonials</a>
-            </li>
-            <li>
-              <a href="#login-modal" class="btn green modal-trigger">Login</a>
+              <a href="/account/signin" class="btn green modal-trigger">SignIn</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-</header>
     
+    <main>
     <div class="container">
     <%- body %> 
     </div>
+    </main>
     
-    <footer class="bluer">
+    <footer class="page-footer blue">
       <nav class="blue navbar-fixed menu" data-target="menu">
         <div class="container">
           <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Copyright &copy; aabaBot inc.</a>
+            <a href="#" class="brand-logo">Copyright &copy; Super Imaginative Co.</a>
             <ul class="right hide-on-med-and-down">
               <li>
                 <a href="https://facebook.com/aababotcsfinch">
@@ -72,61 +58,9 @@
         </div>
       </nav>
     </footer>
-  <!-- login modla -->
-   <!-- Login Modal -->
-   <div id="login-modal" class="modal">
-    <div class="modal-content">
-      <h4>Account Login</h4>
-      <p>Login to access your account dashboard</p>
-      <form>
-        <div class="input-field">
-          <input type="email" id="email">
-          <label for="email">Email</label>
-        </div>
-        <div class="input-field">
-          <input type="password" id="password">
-          <label for="password">Password</label>
-        </div>
-      </form>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close btn grey">
-        <i class="fa fa-sync"></i> Reset Password</a>
-      <a href="#!" class="modal-action modal-close btn purple">
-        <i class="fa fa-lock"></i> Login</a>
-    </div>
-  </div>
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="https://unpkg.com/materialize-stepper@3.1.0/dist/js/mstepper.min.js"></script>
-  <script src="https://checkout.stripe.com/checkout.js" defer></script>
-  <script src="js/flip.js" defer></script>
-  <script>
-        $( document ).ready(function(){
-
-$(".dropdown-trigger").dropdown();
-$('.scrollspy').scrollSpy();
-$(document).scroll(function(){
-    var elems = document.querySelectorAll('.scrollspy');
-var instances = M.ScrollSpy.init(elems);
-
-        for(let i=0;i<instances.length;i++){
-    if(instances[i].tickId>0)
-    {
-        var current_scroll=instances[i].el.id;
-        $("#logo").html(current_scroll);
-        break;
-    }
-}
-});
-
-
-
-  
-});
-     </script>
-
   </body>
 </html>

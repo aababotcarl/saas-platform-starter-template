@@ -8,5 +8,11 @@ exports.signup = async(req, res) => {
  };
 //dashboard for the user
  exports.dashboard = async(req, res) => {
-    res.render('account/dashboard.ejs');
+    res.render('account/dashboard.ejs', {user: req.user});
+ };
+
+ exports.signout = async(req, res) => {
+    req.session.destroy(function(err){
+        res.redirect('/');
+    });
  };

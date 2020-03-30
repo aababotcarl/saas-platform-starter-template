@@ -6,9 +6,9 @@ module.exports = function(app, passport){
     app.get('/account/signup', accountCtrl.signup);
     app.get('/account/signin', accountCtrl.signin);
     app.get('/account/dashboard', isAuthenticated, accountCtrl.dashboard);
-    app.post('/account/signin', passport.authenticate('local-signin', {successRedirect: '/account/dashbard', failureRedirect: '/account/signin'}));
-    app.post('/account/signup', passport.authenticate('local-signup', {successRedirect: '/account/dashbard', failureRedirect: '/account/signup'}));
-    
+    app.post('/account/signin', passport.authenticate('local-signin', {successRedirect: '/account/dashboard', failureRedirect: '/account/signin'}));
+    app.post('/account/signup', passport.authenticate('local-signup', {successRedirect: '/account/dashboard', failureRedirect: '/account/signup'}));
+    app.get('/account/signout', accountCtrl.signout);
     //check to see if user is authenticated
     function isAuthenticated(req, res, next){
         if(req.isAuthenticated()){
