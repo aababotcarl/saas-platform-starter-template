@@ -19,6 +19,7 @@ app.set('view engine', 'ejs');
 
 //set ejs laytouts
 app.use(expressLayouts);
+app.set('layout', 'layouts/dashboard');
 
 //models for the database
 var models = require('./Models');
@@ -30,14 +31,14 @@ var routes = require('./Routes/index.js')(app, passport);
 require('./config/passport.js')(passport, models.User);
 
 //sync db
-models.sequelize.sync().then(function(){
+/* models.sequelize.sync().then(function(){
 	console.log("Database setup!");
 }).catch(function(err){
 	console.log(err);
-});
+}); */
 
 //run app
-app.listen(3000, function(err){
+app.listen(5000, function(err){
 	if(!err)
 		console.log('app is working correctly.');
 	console.log(err);
