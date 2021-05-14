@@ -1,31 +1,159 @@
-<div class="container py-4">
-    <div class="p-5 mb-4 bg-light rounded-3">
-        <div class="container-fluid py-5">
-                <h2 class="text-primary text-center">aabaBot - SaaS Wizard</h2>
-
-
-                
-
-        </div>
+<div class="container">
+        <!-- Wizard container -->
+        <div class="wizard-container">
+          <div class="card wizard-card" data-color="blue" id="wizard">
+              <form action="" method="">
+                <div class="wizard-header">
+                    <h3 class="wizard-title text-primary">
+                     aabaBot - SaaS Wizard
+                    </h3>
+                </div>
+      <div class="wizard-navigation">
+        <ul>
+            <li><a href="#features" data-toggle="tab">Features</a></li>
+            <li><a href="#dbschema" data-toggle="tab">Upload DB Schema</a></li>
+            <li><a href="#build" data-toggle="tab">Build</a></li>
+        </ul>
       </div>
-   
+      <div class="tab-content">
+          <div class="tab-pane" id="features">
+              <div class="row justify-content-md-center">
+                  <div class="col-sm-12">
+                      <h4 class="text-primary text-center"> Let's start with the basic SaaS Features</h4>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <label for="authentication" class="form-label text-primary">Landing Page (using Bootstrap V5)</label>
+                      <div class="list-group">
+                          <div class="list-group-item">
+                            <div class="form-check list-group-item">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                              <label class="form-check-label" for="flexRadioDefault2">
+                                Hero Landing Page
+                              </label>
+                            </div>
+                          </div>
+                          <div class="list-group-item">
+                            <div class="form-check list-group-item">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                              <label class="form-check-label" for="flexRadioDefault2">
+                                Product Landing Page
+                              </label>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <label class="form-check-label text-primary text-center" for="flexCheckDefault">
+                        Authentication Setup
+                     </label>
+                     <div class="list-group">
+                      <div class="list-group-item">
+                        <div class="form-check list-group-item">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                          <label class="form-check-label" for="flexCheckDefault">
+                              Local Authentication (Username/Password Authentication)
+                          </label>
+                        </div>
+                      </div>
+                      <div class="list-group-item">
+                        <div class="form-check list-group-item">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                          <label class="form-check-label" for="flexCheckDefault">
+                            SSO - Facebook, Gmail, LinkedIn, Twitter
+                          </label>
+                        </div>
+                      </div>
+                     </div>
+                    </div>
+                    <div class="col">
+                      <label for="authentication" class="form-label text-primary text-center">Subscription Setup</label>
+                      <div class="list-group">
+                        <div class="list-group-item">
+                          <div class="form-check list-group-item">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Basic Subscription Setup
+                            </label>
+                          </div>
+                        </div>
+                        <div class="list-group-item">
+                          <div class="form-check list-group-item">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Update Billing
+                            </label>
+                          </div>
+                        </div>
+                        <div class="list-group-item">
+                          <div class="form-check list-group-item">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Upgrade Subscription
+                            </label>
+                          </div>
+                        </div>
+                        <div class="list-group-item">
+                          <div class="form-check list-group-item">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Cancel Subscription
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="dbschema">
+                <h4 class="info-text">Would you like to upload your DB Schema and generate CRUD operations? </h4>
+                <div class="mb-3">
+                  <label for="formFileSm" class="form-label">Small file input example</label>
+                  <input class="form-control form-control-sm" id="formFileSm" type="file">
+                </div>
+            </div>
+            <div class="tab-pane" id="build">
+                <div class="row">
+                    <h4 class="info-text"> Build SaaS Platform</h4>
+                    <div class="d-grid gap-2">
+                      <button class="btn btn-primary" type="button">Build SaaS</button>
+                    </div>
+                </div>
+            </div>
+                  </div>
+                  <div class="wizard-footer">
+                    <div class="row">
+                      <div class="col">
+                        <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+                      </div>
+                      <div class="col">
+                        <input type='button' class='btn btn-next btn-fill btn-primary btn-wd' name='next' value='Next' />
+                        <input type='button' class='btn btn-finish btn-fill btn-primary btn-wd' name='finish' value='Finish' />
+                      </div>
+                    </div>
+                        <div class="clearfix"></div>
+                  </div>
+              </form>
+          </div>
+      </div> <!-- wizard container -->
       <br/>
       <div class="row">
         <div class="col">
           <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Downloads</h5>
+                <h5 class="card-title text-primary text-center">Downloads</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#" class="btn btn-primary">Download Now</a>
               </div>
           </div>
         </div>
         <div class="col">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Resources</h5>
+                    <h5 class="card-title text-primary text-center">Affiliated Resources</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="#" class="btn btn-primary">Read More</a>
                   </div>
             </div>
         </div>

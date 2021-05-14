@@ -2,7 +2,7 @@ var homeCtrl = require('../Controllers/home');
 var accountCtrl = require('../Controllers/account');
 module.exports = function(app, passport){
     
-    app.get('/', accountCtrl.dashboard);
+    app.get('/', homeCtrl.home);
     app.get('/account/signup', accountCtrl.signup);
     app.get('/account/signin', accountCtrl.signin);
     // app.get('/account/dashboard', isAuthenticated, accountCtrl.dashboard);
