@@ -1,0 +1,14 @@
+main > .container {
+  padding: 60px 15px 0;
+}
+footer {
+  position: fixed;
+  height: 100px;
+  bottom: 0;
+  width: 100%;
+}
+
+.card-half {
+  background-color: #FFF;
+  width: 50%;
+}
