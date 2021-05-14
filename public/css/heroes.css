@@ -9,7 +9,11 @@
   @media (min-width: 992px) {
     .rounded-lg-3 { border-radius: .3rem; }
   }
-  .text-lg {
+  .width-auto {
+    width: auto;
+}
+
+.text-lg {
     font-size: 2rem;
 }
 
@@ -20,4 +24,13 @@
 
 .carousel-indicators li.active {
     background: #28a745;
+}
+
+.thumb-image-carousel {
+  padding: .25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: .25rem;
+  max-width: 10%;
+  height: auto;
 }
