@@ -53,3 +53,7 @@ body {
   min-height: 320px;
 }
 
+.blue-checkmark {
+  fill: #007bff;
+}
+
