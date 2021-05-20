@@ -57,3 +57,7 @@ body {
   fill: #007bff;
 }
 
+.card {
+  min-height: 260px !important;
+}
+
